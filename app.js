@@ -19,10 +19,11 @@ app.use('/student',studentDetails);
 
 const port=5000;
 
-mongoConnect(client =>{
-     console.log("connect to MongoDB");
+// mongoConnect(client =>{
+//      console.log("connect to MongoDB");
+
+// });
     app.listen(port,()=>{
     console.log(`listeing on port ${port}`)
     
-});
 });
