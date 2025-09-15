@@ -1,7 +1,15 @@
+// import mongoose from "mongoose";
+
+// mongoose
+//   .connect(`mongodb+srv://pb416159:<Pankaj*24>@uniconnectnms.fadvayz.mongodb.net/?retryWrites=true&w=majority&appName=UniConnectNMS`)
+//   .then(() => console.log("✅ MongoDB Connected"))
+//   .catch(err => console.error("❌ MongoDB Error:", err));
+
+
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
 
-const url = `mongodb+srv://root:root@uniconnectnms.fadvayz.mongodb.net/?retryWrites=true&w=majority&appName=UniConnectNMS`;
+const url = `mongodb+srv://pb416159:<Pankaj*24>@uniconnectnms.fadvayz.mongodb.net/?retryWrites=true&w=majority&appName=UniConnectNMS`;
 
 let _db;
 const mongoConnect = (callback)=>{
