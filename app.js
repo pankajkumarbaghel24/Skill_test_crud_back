@@ -24,6 +24,6 @@ const port=5000;
 
 // });
     app.listen(port,()=>{
-    console.log(`listeing on port ${port}`)
+   // console.log(`listeing on port ${port}`)
     
 });

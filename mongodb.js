@@ -12,7 +12,7 @@ const mongoConnect = (callback)=>{
         _db = client.db('skilltest');
     })
     .catch((error)=>{
-        console.log("MongoDB Connection Error:-",error)
+       // console.log("MongoDB Connection Error:-",error)
     });
 };
 

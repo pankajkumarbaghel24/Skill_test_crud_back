@@ -16,7 +16,7 @@ router.get('/',(req,res)=>{
 
         return res.json(result[0]);
     }).catch(error=>{
-        console.log("Students details error",error);
+        //console.log("Students details error",error);
         return res.status(404).send("data not found");
     })
 });
@@ -24,7 +24,7 @@ router.get('/',(req,res)=>{
 router.get('/mongo',async (req,res)=>{
     let db= getDB();
     let data =await db.collection('students').find().toArray();
-    console.log("getData:-",data)
+   // console.log("getData:-",data)
     return res.send(data);
 });
 
@@ -37,7 +37,7 @@ router.get('/:id',(req,res)=>{
     mysql.query(query,[id]).then((result)=>{
         return res.json(result[0]);
     }).catch((error)=>{
-        console.log("error",error);
+        //console.log("error",error);
         return res.status(404).send("Data Not Found");
     });
 });
@@ -49,7 +49,7 @@ router.post('/', (req, res) => {
 
     const { error } = validatedevice(req.body);
     if (error) {
-        console.log("Validation error:", error.details[0].message);
+       // console.log("Validation error:", error.details[0].message);
         return res.status(400).send(error.details[0].message);
     }
 
@@ -62,7 +62,7 @@ console.log("req detail",values)
             return res.json({ id: result[0].insertId });
         })
         .catch(error => {
-            console.log("Insert error", error.errno);
+            //console.log("Insert error", error.errno);
             return res.status(500).json({ error: "Database insert failed" });
         });
 });
@@ -96,7 +96,7 @@ router.put('/:id', (req, res) => {
             res.json({ success: "Student detail updated successfully." });
         })
         .catch(error => {
-            console.error("Update error", error);
+           // console.error("Update error", error);
             return res.status(500).json({ error: error.sqlMessage });
         });
 
@@ -114,7 +114,7 @@ router.delete('/:id',(req,res)=>{
     mysql.query(query).then(result=>{
         return res.json({ success: "Data deleted" });
     }).catch(error=>{
-        console.log("error",error);
+       // console.log("error",error);
         return res.status(500).json("error",error);
     });
 });
