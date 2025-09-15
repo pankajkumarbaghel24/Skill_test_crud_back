@@ -17,7 +17,7 @@ app.use(cors());
 
 app.use('/student',studentDetails);
 
-const port=5000;
+const port=3000;
 
 // mongoConnect(client =>{
 //      console.log("connect to MongoDB");
