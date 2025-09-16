@@ -20,3 +20,7 @@ var pool=mysql.createConnection(URL);
 // });
 
 module.exports =pool.promise();
+
+// MONGO_URL=mongodb+srv://pb416159:Pankaj*24>@uniconnectnms.fadvayz.mongodb.net/?retryWrites=true&w=majority&appName=UniConnectNMS
+// PORT=3000
+// MYSQL_URL=mysql://root:PwgABCunacSBmOIFqxlVgWokioxGVCag@caboose.proxy.rlwy.net:54264/railway
