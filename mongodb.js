@@ -5,11 +5,11 @@
 //   .then(() => console.log("✅ MongoDB Connected"))
 //   .catch(err => console.error("❌ MongoDB Error:", err));
 
-
+require("dotenv").config();
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
 
-const url = `mongodb+srv://pb416159:<Pankaj*24>@uniconnectnms.fadvayz.mongodb.net/?retryWrites=true&w=majority&appName=UniConnectNMS`;
+const url = process.env.MONGO_URL;
 
 let _db;
 const mongoConnect = (callback)=>{
