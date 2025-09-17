@@ -31,7 +31,7 @@ router.get('/mongo',async (req,res)=>{
 
 router.get('/:id',(req,res)=>{
     var id=req.params.id;
-    var query="SELECT * from students WHERE id=?";
+    var query="SELECT * from students WHERE _id=?";
 
 
     mysql.query(query,[id]).then((result)=>{
@@ -88,7 +88,7 @@ router.put('/:id', (req, res) => {
     const id = req.params.id;
     const values = req.body;
     const query = `
-        UPDATE students SET ? WHERE id = ?
+        UPDATE students SET ? WHERE _id = ?
     `;
 
     mysql.query(query, [values, id])
@@ -109,7 +109,7 @@ router.delete('/:id',(req,res)=>{
 
     var id = req.params.id;
 
-    var query = `delete from students   WHERE id = ${id}`;
+    var query = `delete from students   WHERE _id = ${id}`;
 
     mysql.query(query).then(result=>{
         return res.json({ success: "Data deleted" });
